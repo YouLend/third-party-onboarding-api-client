@@ -1,6 +1,6 @@
 # YouLendThirdPartyOnboardingApi.LeadsApi
 
-All URIs are relative to *http://localhost:61178*
+All URIs are relative to *https://dev.youlendapi.com/onboarding*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,7 +24,7 @@ An endpoint for adding account details to a lead
 ### Example
 
 ```javascript
-import YouLendThirdPartyOnboardingApi from 'you_lend_third_party_onboarding_api';
+import YouLendThirdPartyOnboardingApi from 'yl-third-party-onboarding-api-client';
 let defaultClient = YouLendThirdPartyOnboardingApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: oauth2
 let oauth2 = defaultClient.authentications['oauth2'];
@@ -76,7 +76,7 @@ An endpoint for adding bank statements to a lead
 ### Example
 
 ```javascript
-import YouLendThirdPartyOnboardingApi from 'you_lend_third_party_onboarding_api';
+import YouLendThirdPartyOnboardingApi from 'yl-third-party-onboarding-api-client';
 let defaultClient = YouLendThirdPartyOnboardingApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: oauth2
 let oauth2 = defaultClient.authentications['oauth2'];
@@ -128,7 +128,7 @@ An endpoint for adding payment data documents to a lead
 ### Example
 
 ```javascript
-import YouLendThirdPartyOnboardingApi from 'you_lend_third_party_onboarding_api';
+import YouLendThirdPartyOnboardingApi from 'yl-third-party-onboarding-api-client';
 let defaultClient = YouLendThirdPartyOnboardingApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: oauth2
 let oauth2 = defaultClient.authentications['oauth2'];
@@ -180,7 +180,7 @@ An endpoint for adding kyc documents for a significant person
 ### Example
 
 ```javascript
-import YouLendThirdPartyOnboardingApi from 'you_lend_third_party_onboarding_api';
+import YouLendThirdPartyOnboardingApi from 'yl-third-party-onboarding-api-client';
 let defaultClient = YouLendThirdPartyOnboardingApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: oauth2
 let oauth2 = defaultClient.authentications['oauth2'];
@@ -236,7 +236,7 @@ An endpoint for adding KYC question answers to a lead
 ### Example
 
 ```javascript
-import YouLendThirdPartyOnboardingApi from 'you_lend_third_party_onboarding_api';
+import YouLendThirdPartyOnboardingApi from 'yl-third-party-onboarding-api-client';
 let defaultClient = YouLendThirdPartyOnboardingApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: oauth2
 let oauth2 = defaultClient.authentications['oauth2'];
@@ -288,7 +288,7 @@ An endpoint for adding a payment gateway to a lead
 ### Example
 
 ```javascript
-import YouLendThirdPartyOnboardingApi from 'you_lend_third_party_onboarding_api';
+import YouLendThirdPartyOnboardingApi from 'yl-third-party-onboarding-api-client';
 let defaultClient = YouLendThirdPartyOnboardingApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: oauth2
 let oauth2 = defaultClient.authentications['oauth2'];
@@ -340,7 +340,7 @@ An endpoint for updating significant persons for a lead
 ### Example
 
 ```javascript
-import YouLendThirdPartyOnboardingApi from 'you_lend_third_party_onboarding_api';
+import YouLendThirdPartyOnboardingApi from 'yl-third-party-onboarding-api-client';
 let defaultClient = YouLendThirdPartyOnboardingApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: oauth2
 let oauth2 = defaultClient.authentications['oauth2'];
@@ -394,7 +394,7 @@ Can add sample as an example here
 ### Example
 
 ```javascript
-import YouLendThirdPartyOnboardingApi from 'you_lend_third_party_onboarding_api';
+import YouLendThirdPartyOnboardingApi from 'yl-third-party-onboarding-api-client';
 let defaultClient = YouLendThirdPartyOnboardingApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: oauth2
 let oauth2 = defaultClient.authentications['oauth2'];

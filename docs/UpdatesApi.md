@@ -18,7 +18,7 @@ Method for getting the state of all leads for a lending partner
 ### Example
 
 ```javascript
-import YouLendThirdPartyOnboardingApi from 'you_lend_third_party_onboarding_api';
+import YouLendThirdPartyOnboardingApi from 'yl-third-party-onboarding-api-client';
 let defaultClient = YouLendThirdPartyOnboardingApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: oauth2
 let oauth2 = defaultClient.authentications['oauth2'];
@@ -66,7 +66,7 @@ Method for getting updates on a submitted lead
 ### Example
 
 ```javascript
-import YouLendThirdPartyOnboardingApi from 'you_lend_third_party_onboarding_api';
+import YouLendThirdPartyOnboardingApi from 'yl-third-party-onboarding-api-client';
 let defaultClient = YouLendThirdPartyOnboardingApi.ApiClient.instance;
 // Configure OAuth2 access token for authorization: oauth2
 let oauth2 = defaultClient.authentications['oauth2'];

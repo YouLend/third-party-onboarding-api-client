@@ -32,7 +32,7 @@ class ApiClient {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default http://localhost:61178
+         * @default https://dev.youlendapi.com/onboarding
          */
         this.basePath = 'https://dev.youlendapi.com/onboarding'.replace(/\/+$/, '');
 
@@ -554,7 +554,7 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "http://localhost:61178",
+              'url': "https://dev.youlendapi.com/onboarding",
               'description': "No description provided",
             }
       ];
