@@ -1,9 +1,10 @@
 {
   "name": "yl-third-party-onboarding-api-client",
   "version": "1.0.0",
-  "description": "Through_this_API_you_can_can_initiate_the_process_of_onboarding_a_borrower_with_YouLend",
+  "description": "Through this API you can can initiate the process of onboarding a borrower with YouLend ",
   "license": "MT",
   "main": "dist/index.js",
+  "repository": "https://github.com/YouLend/yl-third-party-onboarding-api-client.git",
   "scripts": {
     "build": "babel src -d dist",
     "prepack": "npm run build",
