@@ -55,11 +55,11 @@ npm run build
 ```
 #### git
 
-The library is hosted at a git repository, e.g.https://github.com/YouLend/yl-third-party-onboarding-api-client.git
+The library is hosted at a git repository, e.g. https://github.com/YouLend/yl-third-party-onboarding-api-client.git
 then install it via:
 
 ```shell
-    npm install YouLend/yl-third-party-onboarding-api-client --save
+    npm install https://github.com/YouLend/yl-third-party-prequalification-api-client.git --save
 ```
 
 
