@@ -53,6 +53,15 @@ Finally, you need to build the module:
 ```shell
 npm run build
 ```
+#### git
+
+The library is hosted at a git repository, e.g.https://github.com/YouLend/yl-third-party-onboarding-api-client.git
+then install it via:
+
+```shell
+    npm install YouLend/yl-third-party-onboarding-api-client --save
+```
+
 
 ### For browser
 
