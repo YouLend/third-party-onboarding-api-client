@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.SavePaymentDataDocumentResultModel();
+    instance = new YlThirdPartyOnboardingApiClient.SavePaymentDataDocumentResultModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('SavePaymentDataDocumentResultModel', function() {
     it('should create an instance of SavePaymentDataDocumentResultModel', function() {
       // uncomment below and update the code to test SavePaymentDataDocumentResultModel
-      //var instane = new YouLendThirdPartyOnboardingApi.SavePaymentDataDocumentResultModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.SavePaymentDataDocumentResultModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.SavePaymentDataDocumentResultModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.SavePaymentDataDocumentResultModel);
     });
 
     it('should have the property leadId (base name: "leadId")', function() {
       // uncomment below and update the code to test the property leadId
-      //var instane = new YouLendThirdPartyOnboardingApi.SavePaymentDataDocumentResultModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SavePaymentDataDocumentResultModel();
       //expect(instance).to.be();
     });
 
     it('should have the property documentId (base name: "documentId")', function() {
       // uncomment below and update the code to test the property documentId
-      //var instane = new YouLendThirdPartyOnboardingApi.SavePaymentDataDocumentResultModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SavePaymentDataDocumentResultModel();
       //expect(instance).to.be();
     });
 

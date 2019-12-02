@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.FreeTextQuestionModel();
+    instance = new YlThirdPartyOnboardingApiClient.FreeTextQuestionModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('FreeTextQuestionModel', function() {
     it('should create an instance of FreeTextQuestionModel', function() {
       // uncomment below and update the code to test FreeTextQuestionModel
-      //var instane = new YouLendThirdPartyOnboardingApi.FreeTextQuestionModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.FreeTextQuestionModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.FreeTextQuestionModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.FreeTextQuestionModel);
     });
 
     it('should have the property answer (base name: "answer")', function() {
       // uncomment below and update the code to test the property answer
-      //var instane = new YouLendThirdPartyOnboardingApi.FreeTextQuestionModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.FreeTextQuestionModel();
       //expect(instance).to.be();
     });
 

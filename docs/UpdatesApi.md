@@ -1,6 +1,6 @@
 # YouLendThirdPartyOnboardingApi.UpdatesApi
 
-All URIs are relative to *http://localhost/onboarding*
+All URIs are relative to *https://dev.youlendapi.com/onboarding*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

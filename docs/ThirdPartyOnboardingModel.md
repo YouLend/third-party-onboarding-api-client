@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.ThirdPartyOnboardingModel
+# YlThirdPartyOnboardingApiClient.ThirdPartyOnboardingModel
 
 ## Properties
 

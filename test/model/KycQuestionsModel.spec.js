@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.KycQuestionsModel();
+    instance = new YlThirdPartyOnboardingApiClient.KycQuestionsModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,49 +50,49 @@
   describe('KycQuestionsModel', function() {
     it('should create an instance of KycQuestionsModel', function() {
       // uncomment below and update the code to test KycQuestionsModel
-      //var instane = new YouLendThirdPartyOnboardingApi.KycQuestionsModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.KycQuestionsModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.KycQuestionsModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.KycQuestionsModel);
     });
 
     it('should have the property everTerminated (base name: "everTerminated")', function() {
       // uncomment below and update the code to test the property everTerminated
-      //var instane = new YouLendThirdPartyOnboardingApi.KycQuestionsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.KycQuestionsModel();
       //expect(instance).to.be();
     });
 
     it('should have the property anyPoliticallyExposedPeople (base name: "anyPoliticallyExposedPeople")', function() {
       // uncomment below and update the code to test the property anyPoliticallyExposedPeople
-      //var instane = new YouLendThirdPartyOnboardingApi.KycQuestionsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.KycQuestionsModel();
       //expect(instance).to.be();
     });
 
     it('should have the property businessArea (base name: "businessArea")', function() {
       // uncomment below and update the code to test the property businessArea
-      //var instane = new YouLendThirdPartyOnboardingApi.KycQuestionsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.KycQuestionsModel();
       //expect(instance).to.be();
     });
 
     it('should have the property countriesOperateIn (base name: "countriesOperateIn")', function() {
       // uncomment below and update the code to test the property countriesOperateIn
-      //var instane = new YouLendThirdPartyOnboardingApi.KycQuestionsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.KycQuestionsModel();
       //expect(instance).to.be();
     });
 
     it('should have the property anyLawEnforcedSanctions (base name: "anyLawEnforcedSanctions")', function() {
       // uncomment below and update the code to test the property anyLawEnforcedSanctions
-      //var instane = new YouLendThirdPartyOnboardingApi.KycQuestionsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.KycQuestionsModel();
       //expect(instance).to.be();
     });
 
     it('should have the property anyTerrorismFinancing (base name: "anyTerrorismFinancing")', function() {
       // uncomment below and update the code to test the property anyTerrorismFinancing
-      //var instane = new YouLendThirdPartyOnboardingApi.KycQuestionsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.KycQuestionsModel();
       //expect(instance).to.be();
     });
 
     it('should have the property anyCriminals (base name: "anyCriminals")', function() {
       // uncomment below and update the code to test the property anyCriminals
-      //var instane = new YouLendThirdPartyOnboardingApi.KycQuestionsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.KycQuestionsModel();
       //expect(instance).to.be();
     });
 

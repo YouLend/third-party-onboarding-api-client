@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.CreateThirdPartyAdvanceOnboardingResultModel();
+    instance = new YlThirdPartyOnboardingApiClient.CreateThirdPartyAdvanceOnboardingResultModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('CreateThirdPartyAdvanceOnboardingResultModel', function() {
     it('should create an instance of CreateThirdPartyAdvanceOnboardingResultModel', function() {
       // uncomment below and update the code to test CreateThirdPartyAdvanceOnboardingResultModel
-      //var instane = new YouLendThirdPartyOnboardingApi.CreateThirdPartyAdvanceOnboardingResultModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.CreateThirdPartyAdvanceOnboardingResultModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.CreateThirdPartyAdvanceOnboardingResultModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.CreateThirdPartyAdvanceOnboardingResultModel);
     });
 
     it('should have the property leadId (base name: "leadId")', function() {
       // uncomment below and update the code to test the property leadId
-      //var instane = new YouLendThirdPartyOnboardingApi.CreateThirdPartyAdvanceOnboardingResultModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.CreateThirdPartyAdvanceOnboardingResultModel();
       //expect(instance).to.be();
     });
 
     it('should have the property leadURL (base name: "leadURL")', function() {
       // uncomment below and update the code to test the property leadURL
-      //var instane = new YouLendThirdPartyOnboardingApi.CreateThirdPartyAdvanceOnboardingResultModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.CreateThirdPartyAdvanceOnboardingResultModel();
       //expect(instance).to.be();
     });
 
     it('should have the property signUpURL (base name: "signUpURL")', function() {
       // uncomment below and update the code to test the property signUpURL
-      //var instane = new YouLendThirdPartyOnboardingApi.CreateThirdPartyAdvanceOnboardingResultModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.CreateThirdPartyAdvanceOnboardingResultModel();
       //expect(instance).to.be();
     });
 

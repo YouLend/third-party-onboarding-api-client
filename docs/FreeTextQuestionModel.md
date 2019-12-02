@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.FreeTextQuestionModel
+# YlThirdPartyOnboardingApiClient.FreeTextQuestionModel
 
 ## Properties
 

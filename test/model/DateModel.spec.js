@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.DateModel();
+    instance = new YlThirdPartyOnboardingApiClient.DateModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('DateModel', function() {
     it('should create an instance of DateModel', function() {
       // uncomment below and update the code to test DateModel
-      //var instane = new YouLendThirdPartyOnboardingApi.DateModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.DateModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.DateModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.DateModel);
     });
 
     it('should have the property year (base name: "year")', function() {
       // uncomment below and update the code to test the property year
-      //var instane = new YouLendThirdPartyOnboardingApi.DateModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.DateModel();
       //expect(instance).to.be();
     });
 
     it('should have the property month (base name: "month")', function() {
       // uncomment below and update the code to test the property month
-      //var instane = new YouLendThirdPartyOnboardingApi.DateModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.DateModel();
       //expect(instance).to.be();
     });
 
     it('should have the property day (base name: "day")', function() {
       // uncomment below and update the code to test the property day
-      //var instane = new YouLendThirdPartyOnboardingApi.DateModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.DateModel();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.LeadsApi();
+    instance = new YlThirdPartyOnboardingApiClient.LeadsApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -48,6 +48,16 @@
   }
 
   describe('LeadsApi', function() {
+    describe('leadsLeadIdAccountdetailsGet', function() {
+      it('should call leadsLeadIdAccountdetailsGet successfully', function(done) {
+        //uncomment below and update the code to test leadsLeadIdAccountdetailsGet
+        //instance.leadsLeadIdAccountdetailsGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('leadsLeadIdAccountdetailsPut', function() {
       it('should call leadsLeadIdAccountdetailsPut successfully', function(done) {
         //uncomment below and update the code to test leadsLeadIdAccountdetailsPut
@@ -58,10 +68,30 @@
         done();
       });
     });
+    describe('leadsLeadIdDetailsGet', function() {
+      it('should call leadsLeadIdDetailsGet successfully', function(done) {
+        //uncomment below and update the code to test leadsLeadIdDetailsGet
+        //instance.leadsLeadIdDetailsGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('leadsLeadIdDocumentsBankstatementsPost', function() {
       it('should call leadsLeadIdDocumentsBankstatementsPost successfully', function(done) {
         //uncomment below and update the code to test leadsLeadIdDocumentsBankstatementsPost
         //instance.leadsLeadIdDocumentsBankstatementsPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('leadsLeadIdDocumentsGet', function() {
+      it('should call leadsLeadIdDocumentsGet successfully', function(done) {
+        //uncomment below and update the code to test leadsLeadIdDocumentsGet
+        //instance.leadsLeadIdDocumentsGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -88,10 +118,80 @@
         done();
       });
     });
+    describe('leadsLeadIdKycquestionsGet', function() {
+      it('should call leadsLeadIdKycquestionsGet successfully', function(done) {
+        //uncomment below and update the code to test leadsLeadIdKycquestionsGet
+        //instance.leadsLeadIdKycquestionsGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('leadsLeadIdKycquestionsPut', function() {
       it('should call leadsLeadIdKycquestionsPut successfully', function(done) {
         //uncomment below and update the code to test leadsLeadIdKycquestionsPut
         //instance.leadsLeadIdKycquestionsPut(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('leadsLeadIdOfferGet', function() {
+      it('should call leadsLeadIdOfferGet successfully', function(done) {
+        //uncomment below and update the code to test leadsLeadIdOfferGet
+        //instance.leadsLeadIdOfferGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('leadsLeadIdOfferPost', function() {
+      it('should call leadsLeadIdOfferPost successfully', function(done) {
+        //uncomment below and update the code to test leadsLeadIdOfferPost
+        //instance.leadsLeadIdOfferPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('leadsLeadIdOptionsGet', function() {
+      it('should call leadsLeadIdOptionsGet successfully', function(done) {
+        //uncomment below and update the code to test leadsLeadIdOptionsGet
+        //instance.leadsLeadIdOptionsGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('leadsLeadIdOrganisationdetailsPut', function() {
+      it('should call leadsLeadIdOrganisationdetailsPut successfully', function(done) {
+        //uncomment below and update the code to test leadsLeadIdOrganisationdetailsPut
+        //instance.leadsLeadIdOrganisationdetailsPut(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('leadsLeadIdOrganisationsdetailsGet', function() {
+      it('should call leadsLeadIdOrganisationsdetailsGet successfully', function(done) {
+        //uncomment below and update the code to test leadsLeadIdOrganisationsdetailsGet
+        //instance.leadsLeadIdOrganisationsdetailsGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('leadsLeadIdPaymentdataGet', function() {
+      it('should call leadsLeadIdPaymentdataGet successfully', function(done) {
+        //uncomment below and update the code to test leadsLeadIdPaymentdataGet
+        //instance.leadsLeadIdPaymentdataGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -112,6 +212,16 @@
       it('should call leadsLeadIdSignificantpersonsPut successfully', function(done) {
         //uncomment below and update the code to test leadsLeadIdSignificantpersonsPut
         //instance.leadsLeadIdSignificantpersonsPut(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('leadsLeadIdStatePut', function() {
+      it('should call leadsLeadIdStatePut successfully', function(done) {
+        //uncomment below and update the code to test leadsLeadIdStatePut
+        //instance.leadsLeadIdStatePut(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

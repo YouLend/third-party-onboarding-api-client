@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
+    instance = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('SignificantPersonModel', function() {
     it('should create an instance of SignificantPersonModel', function() {
       // uncomment below and update the code to test SignificantPersonModel
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.SignificantPersonModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.SignificantPersonModel);
     });
 
     it('should have the property firstName (base name: "firstName")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
       //expect(instance).to.be();
     });
 
     it('should have the property surname (base name: "surname")', function() {
       // uncomment below and update the code to test the property surname
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
       //expect(instance).to.be();
     });
 
     it('should have the property typeOfPerson (base name: "typeOfPerson")', function() {
       // uncomment below and update the code to test the property typeOfPerson
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
       //expect(instance).to.be();
     });
 
     it('should have the property address (base name: "address")', function() {
       // uncomment below and update the code to test the property address
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
       //expect(instance).to.be();
     });
 
     it('should have the property dateOfBirth (base name: "dateOfBirth")', function() {
       // uncomment below and update the code to test the property dateOfBirth
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
       //expect(instance).to.be();
     });
 
     it('should have the property percentageOwned (base name: "percentageOwned")', function() {
       // uncomment below and update the code to test the property percentageOwned
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
       //expect(instance).to.be();
     });
 
     it('should have the property emailAddress (base name: "emailAddress")', function() {
       // uncomment below and update the code to test the property emailAddress
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
       //expect(instance).to.be();
     });
 
     it('should have the property mobilePhoneNumber (base name: "mobilePhoneNumber")', function() {
       // uncomment below and update the code to test the property mobilePhoneNumber
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
       //expect(instance).to.be();
     });
 
     it('should have the property nationality (base name: "nationality")', function() {
       // uncomment below and update the code to test the property nationality
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
       //expect(instance).to.be();
     });
 
     it('should have the property niNumber (base name: "niNumber")', function() {
       // uncomment below and update the code to test the property niNumber
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonModel();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.PaymentGatewayModel();
+    instance = new YlThirdPartyOnboardingApiClient.PaymentGatewayModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('PaymentGatewayModel', function() {
     it('should create an instance of PaymentGatewayModel', function() {
       // uncomment below and update the code to test PaymentGatewayModel
-      //var instane = new YouLendThirdPartyOnboardingApi.PaymentGatewayModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.PaymentGatewayModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.PaymentGatewayModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.PaymentGatewayModel);
     });
 
     it('should have the property gatewayName (base name: "gatewayName")', function() {
       // uncomment below and update the code to test the property gatewayName
-      //var instane = new YouLendThirdPartyOnboardingApi.PaymentGatewayModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.PaymentGatewayModel();
       //expect(instance).to.be();
     });
 

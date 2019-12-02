@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.SaveSignficantPersonKycDocumentResultModel
+# YlThirdPartyOnboardingApiClient.SaveSignficantPersonKycDocumentResultModel
 
 ## Properties
 

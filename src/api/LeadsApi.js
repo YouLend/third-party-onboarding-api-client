@@ -14,8 +14,19 @@
 
 import ApiClient from "../ApiClient";
 import AccountDetailsModel from '../model/AccountDetailsModel';
+import AccountV2StepModel from '../model/AccountV2StepModel';
 import CreateThirdPartyAdvanceOnboardingResultModel from '../model/CreateThirdPartyAdvanceOnboardingResultModel';
+import KycDocumentsV2StepModel from '../model/KycDocumentsV2StepModel';
 import KycQuestionsModel from '../model/KycQuestionsModel';
+import KycQuestionsStepView from '../model/KycQuestionsStepView';
+import LoanSizingModel from '../model/LoanSizingModel';
+import OfferStepModel from '../model/OfferStepModel';
+import OnboardingOfferModel from '../model/OnboardingOfferModel';
+import OnboardingOrganisationDetailsModel from '../model/OnboardingOrganisationDetailsModel';
+import OnboardingStateModel from '../model/OnboardingStateModel';
+import OnboardingV2View from '../model/OnboardingV2View';
+import OrganisationDetailsV3StepView from '../model/OrganisationDetailsV3StepView';
+import PaymentDataStepView from '../model/PaymentDataStepView';
 import PaymentGatewayModel from '../model/PaymentGatewayModel';
 import ProblemDetails from '../model/ProblemDetails';
 import SaveBankStatementDocumentResultModel from '../model/SaveBankStatementDocumentResultModel';
@@ -43,6 +54,58 @@ export default class LeadsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * An endpoint for adding account details to a lead
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AccountV2StepModel} and HTTP response
+     */
+    leadsLeadIdAccountdetailsGetWithHttpInfo(leadId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'leadId' is set
+      if (leadId === undefined || leadId === null) {
+        throw new Error("Missing the required parameter 'leadId' when calling leadsLeadIdAccountdetailsGet");
+      }
+
+      let pathParams = {
+        'leadId': leadId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['oauth2'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = AccountV2StepModel;
+      return this.apiClient.callApi(
+        '/Leads/{leadId}/accountdetails', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * An endpoint for adding account details to a lead
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AccountV2StepModel}
+     */
+    leadsLeadIdAccountdetailsGet(leadId, opts) {
+      return this.leadsLeadIdAccountdetailsGetWithHttpInfo(leadId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**
@@ -100,6 +163,58 @@ export default class LeadsApi {
 
 
     /**
+     * An endpoint for viewing the onboarding details of a lead
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OnboardingV2View} and HTTP response
+     */
+    leadsLeadIdDetailsGetWithHttpInfo(leadId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'leadId' is set
+      if (leadId === undefined || leadId === null) {
+        throw new Error("Missing the required parameter 'leadId' when calling leadsLeadIdDetailsGet");
+      }
+
+      let pathParams = {
+        'leadId': leadId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['oauth2'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = OnboardingV2View;
+      return this.apiClient.callApi(
+        '/Leads/{leadId}/details', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * An endpoint for viewing the onboarding details of a lead
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OnboardingV2View}
+     */
+    leadsLeadIdDetailsGet(leadId, opts) {
+      return this.leadsLeadIdDetailsGetWithHttpInfo(leadId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * An endpoint for adding bank statements to a lead
      * @param {String} leadId The lead id
      * @param {Object} opts Optional parameters
@@ -148,6 +263,58 @@ export default class LeadsApi {
      */
     leadsLeadIdDocumentsBankstatementsPost(leadId, opts) {
       return this.leadsLeadIdDocumentsBankstatementsPostWithHttpInfo(leadId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * An endpoint for getting kyc documents for a significant person
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/KycDocumentsV2StepModel} and HTTP response
+     */
+    leadsLeadIdDocumentsGetWithHttpInfo(leadId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'leadId' is set
+      if (leadId === undefined || leadId === null) {
+        throw new Error("Missing the required parameter 'leadId' when calling leadsLeadIdDocumentsGet");
+      }
+
+      let pathParams = {
+        'leadId': leadId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['oauth2'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = KycDocumentsV2StepModel;
+      return this.apiClient.callApi(
+        '/Leads/{leadId}/documents', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * An endpoint for getting kyc documents for a significant person
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/KycDocumentsV2StepModel}
+     */
+    leadsLeadIdDocumentsGet(leadId, opts) {
+      return this.leadsLeadIdDocumentsGetWithHttpInfo(leadId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -279,6 +446,58 @@ export default class LeadsApi {
 
 
     /**
+     * An endpoint for viewing the kyc questions of a lead
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/KycQuestionsStepView} and HTTP response
+     */
+    leadsLeadIdKycquestionsGetWithHttpInfo(leadId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'leadId' is set
+      if (leadId === undefined || leadId === null) {
+        throw new Error("Missing the required parameter 'leadId' when calling leadsLeadIdKycquestionsGet");
+      }
+
+      let pathParams = {
+        'leadId': leadId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['oauth2'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = KycQuestionsStepView;
+      return this.apiClient.callApi(
+        '/Leads/{leadId}/kycquestions', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * An endpoint for viewing the kyc questions of a lead
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/KycQuestionsStepView}
+     */
+    leadsLeadIdKycquestionsGet(leadId, opts) {
+      return this.leadsLeadIdKycquestionsGetWithHttpInfo(leadId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * An endpoint for adding KYC question answers to a lead
      * @param {String} leadId The lead id
      * @param {Object} opts Optional parameters
@@ -326,6 +545,324 @@ export default class LeadsApi {
      */
     leadsLeadIdKycquestionsPut(leadId, opts) {
       return this.leadsLeadIdKycquestionsPutWithHttpInfo(leadId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * An endpoint for getting the loan offer
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OfferStepModel} and HTTP response
+     */
+    leadsLeadIdOfferGetWithHttpInfo(leadId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'leadId' is set
+      if (leadId === undefined || leadId === null) {
+        throw new Error("Missing the required parameter 'leadId' when calling leadsLeadIdOfferGet");
+      }
+
+      let pathParams = {
+        'leadId': leadId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['oauth2'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = OfferStepModel;
+      return this.apiClient.callApi(
+        '/Leads/{leadId}/offer', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * An endpoint for getting the loan offer
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OfferStepModel}
+     */
+    leadsLeadIdOfferGet(leadId, opts) {
+      return this.leadsLeadIdOfferGetWithHttpInfo(leadId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * An endpoint for creating the loan offer
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @param {module:model/OnboardingOfferModel} opts.onboardingOfferModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    leadsLeadIdOfferPostWithHttpInfo(leadId, opts) {
+      opts = opts || {};
+      let postBody = opts['onboardingOfferModel'];
+      // verify the required parameter 'leadId' is set
+      if (leadId === undefined || leadId === null) {
+        throw new Error("Missing the required parameter 'leadId' when calling leadsLeadIdOfferPost");
+      }
+
+      let pathParams = {
+        'leadId': leadId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['oauth2'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/Leads/{leadId}/offer', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * An endpoint for creating the loan offer
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @param {module:model/OnboardingOfferModel} opts.onboardingOfferModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    leadsLeadIdOfferPost(leadId, opts) {
+      return this.leadsLeadIdOfferPostWithHttpInfo(leadId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * An endpoint for getting the loan options for a lead
+     * The available loan options are accessed through this endpoint.  The loan options must first be generated by Banking Circle staff before it is made available through this endpoint.
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LoanSizingModel} and HTTP response
+     */
+    leadsLeadIdOptionsGetWithHttpInfo(leadId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'leadId' is set
+      if (leadId === undefined || leadId === null) {
+        throw new Error("Missing the required parameter 'leadId' when calling leadsLeadIdOptionsGet");
+      }
+
+      let pathParams = {
+        'leadId': leadId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['oauth2'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = LoanSizingModel;
+      return this.apiClient.callApi(
+        '/Leads/{leadId}/options', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * An endpoint for getting the loan options for a lead
+     * The available loan options are accessed through this endpoint.  The loan options must first be generated by Banking Circle staff before it is made available through this endpoint.
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LoanSizingModel}
+     */
+    leadsLeadIdOptionsGet(leadId, opts) {
+      return this.leadsLeadIdOptionsGetWithHttpInfo(leadId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * An endpoint for adding organisation details
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @param {module:model/OnboardingOrganisationDetailsModel} opts.onboardingOrganisationDetailsModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    leadsLeadIdOrganisationdetailsPutWithHttpInfo(leadId, opts) {
+      opts = opts || {};
+      let postBody = opts['onboardingOrganisationDetailsModel'];
+      // verify the required parameter 'leadId' is set
+      if (leadId === undefined || leadId === null) {
+        throw new Error("Missing the required parameter 'leadId' when calling leadsLeadIdOrganisationdetailsPut");
+      }
+
+      let pathParams = {
+        'leadId': leadId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['oauth2'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/Leads/{leadId}/organisationdetails', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * An endpoint for adding organisation details
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @param {module:model/OnboardingOrganisationDetailsModel} opts.onboardingOrganisationDetailsModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    leadsLeadIdOrganisationdetailsPut(leadId, opts) {
+      return this.leadsLeadIdOrganisationdetailsPutWithHttpInfo(leadId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * An endpoint for viewing the organisation details of a lead
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/OrganisationDetailsV3StepView} and HTTP response
+     */
+    leadsLeadIdOrganisationsdetailsGetWithHttpInfo(leadId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'leadId' is set
+      if (leadId === undefined || leadId === null) {
+        throw new Error("Missing the required parameter 'leadId' when calling leadsLeadIdOrganisationsdetailsGet");
+      }
+
+      let pathParams = {
+        'leadId': leadId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['oauth2'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = OrganisationDetailsV3StepView;
+      return this.apiClient.callApi(
+        '/Leads/{leadId}/organisationsdetails', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * An endpoint for viewing the organisation details of a lead
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/OrganisationDetailsV3StepView}
+     */
+    leadsLeadIdOrganisationsdetailsGet(leadId, opts) {
+      return this.leadsLeadIdOrganisationsdetailsGetWithHttpInfo(leadId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * An endpoint for viewing the payment data of a lead
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PaymentDataStepView} and HTTP response
+     */
+    leadsLeadIdPaymentdataGetWithHttpInfo(leadId, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'leadId' is set
+      if (leadId === undefined || leadId === null) {
+        throw new Error("Missing the required parameter 'leadId' when calling leadsLeadIdPaymentdataGet");
+      }
+
+      let pathParams = {
+        'leadId': leadId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['oauth2'];
+      let contentTypes = [];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = PaymentDataStepView;
+      return this.apiClient.callApi(
+        '/Leads/{leadId}/paymentdata', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * An endpoint for viewing the payment data of a lead
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PaymentDataStepView}
+     */
+    leadsLeadIdPaymentdataGet(leadId, opts) {
+      return this.leadsLeadIdPaymentdataGetWithHttpInfo(leadId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -441,8 +978,63 @@ export default class LeadsApi {
 
 
     /**
+     * An endpoint for updating the state of an onboarding
+     * The state can only be updated once the relevant documents are submitted, the relevant questions are answered or the relevants documents are signed
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @param {module:model/OnboardingStateModel} opts.onboardingStateModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    leadsLeadIdStatePutWithHttpInfo(leadId, opts) {
+      opts = opts || {};
+      let postBody = opts['onboardingStateModel'];
+      // verify the required parameter 'leadId' is set
+      if (leadId === undefined || leadId === null) {
+        throw new Error("Missing the required parameter 'leadId' when calling leadsLeadIdStatePut");
+      }
+
+      let pathParams = {
+        'leadId': leadId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+        'api-version': opts['apiVersion']
+      };
+      let formParams = {
+      };
+
+      let authNames = ['oauth2'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json', 'application/xml'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/Leads/{leadId}/state', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * An endpoint for updating the state of an onboarding
+     * The state can only be updated once the relevant documents are submitted, the relevant questions are answered or the relevants documents are signed
+     * @param {String} leadId The lead id
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.apiVersion 
+     * @param {module:model/OnboardingStateModel} opts.onboardingStateModel 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    leadsLeadIdStatePut(leadId, opts) {
+      return this.leadsLeadIdStatePutWithHttpInfo(leadId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Creates a Youlend Advance Lead
-     * Can add sample as an example here
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiVersion 
      * @param {module:model/ThirdPartyOnboardingModel} opts.thirdPartyOnboardingModel 
@@ -475,7 +1067,6 @@ export default class LeadsApi {
 
     /**
      * Creates a Youlend Advance Lead
-     * Can add sample as an example here
      * @param {Object} opts Optional parameters
      * @param {String} opts.apiVersion 
      * @param {module:model/ThirdPartyOnboardingModel} opts.thirdPartyOnboardingModel 

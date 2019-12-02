@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.AddressModel();
+    instance = new YlThirdPartyOnboardingApiClient.AddressModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,49 +50,49 @@
   describe('AddressModel', function() {
     it('should create an instance of AddressModel', function() {
       // uncomment below and update the code to test AddressModel
-      //var instane = new YouLendThirdPartyOnboardingApi.AddressModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.AddressModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.AddressModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.AddressModel);
     });
 
     it('should have the property line1 (base name: "line1")', function() {
       // uncomment below and update the code to test the property line1
-      //var instane = new YouLendThirdPartyOnboardingApi.AddressModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AddressModel();
       //expect(instance).to.be();
     });
 
     it('should have the property line2 (base name: "line2")', function() {
       // uncomment below and update the code to test the property line2
-      //var instane = new YouLendThirdPartyOnboardingApi.AddressModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AddressModel();
       //expect(instance).to.be();
     });
 
     it('should have the property line3 (base name: "line3")', function() {
       // uncomment below and update the code to test the property line3
-      //var instane = new YouLendThirdPartyOnboardingApi.AddressModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AddressModel();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instane = new YouLendThirdPartyOnboardingApi.AddressModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AddressModel();
       //expect(instance).to.be();
     });
 
     it('should have the property region (base name: "region")', function() {
       // uncomment below and update the code to test the property region
-      //var instane = new YouLendThirdPartyOnboardingApi.AddressModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AddressModel();
       //expect(instance).to.be();
     });
 
     it('should have the property areaCode (base name: "areaCode")', function() {
       // uncomment below and update the code to test the property areaCode
-      //var instane = new YouLendThirdPartyOnboardingApi.AddressModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AddressModel();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new YouLendThirdPartyOnboardingApi.AddressModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AddressModel();
       //expect(instance).to.be();
     });
 

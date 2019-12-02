@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.KycQuestionsModel
+# YlThirdPartyOnboardingApiClient.KycQuestionsModel
 
 ## Properties
 

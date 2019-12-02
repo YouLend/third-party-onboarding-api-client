@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.SaveBankStatementDocumentResultModel
+# YlThirdPartyOnboardingApiClient.SaveBankStatementDocumentResultModel
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.DateModel
+# YlThirdPartyOnboardingApiClient.DateModel
 
 ## Properties
 

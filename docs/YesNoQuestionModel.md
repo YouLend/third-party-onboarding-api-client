@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.YesNoQuestionModel
+# YlThirdPartyOnboardingApiClient.YesNoQuestionModel
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.CreateThirdPartyAdvanceOnboardingResultModel
+# YlThirdPartyOnboardingApiClient.CreateThirdPartyAdvanceOnboardingResultModel
 
 ## Properties
 

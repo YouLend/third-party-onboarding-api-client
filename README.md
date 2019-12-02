@@ -98,21 +98,21 @@ module: {
 Please follow the [installation](#installation) instruction and execute the following JS code:
 
 ```javascript
-var YouLendThirdPartyOnboardingApi = require('yl-third-party-onboarding-api-client');
+var YlThirdPartyOnboardingApiClient = require('yl-third-party-onboarding-api-client');
 
-var defaultClient = YouLendThirdPartyOnboardingApi.ApiClient.instance;
+var defaultClient = YlThirdPartyOnboardingApiClient.ApiClient.instance;
 // Configure OAuth2 access token for authorization: oauth2
 var oauth2 = defaultClient.authentications['oauth2'];
-oauth2.accessToken = "YOUR ACCESS TOKEN" 
+oauth2.accessToken = "YOUR ACCESS TOKEN"
 
-var api = new YouLendThirdPartyOnboardingApi.LeadsApi()
-var leadId = null; // {String} The lead id
+var api = new YlThirdPartyOnboardingApiClient.DocumentSigningApi()
+var documentSigningId = null; // {String} GUID used to identify the document signing
 var opts = {
-  'apiVersion': "apiVersion_example", // {String} 
-  'accountDetailsModel': new YouLendThirdPartyOnboardingApi.AccountDetailsModel() // {AccountDetailsModel} 
+  'apiVersion': "apiVersion_example" // {String} 
+
 };
-api.leadsLeadIdAccountdetailsPut(leadId, opts).then(function() {
-  console.log('API called successfully.');
+api.documentSigningDocumentSigningIdGet(documentSigningId, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
 });
@@ -126,37 +126,77 @@ All URIs are relative to *https://dev.youlendapi.com/onboarding*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*YouLendThirdPartyOnboardingApi.LeadsApi* | [**leadsLeadIdAccountdetailsPut**](docs/LeadsApi.md#leadsLeadIdAccountdetailsPut) | **PUT** /Leads/{leadId}/accountdetails | An endpoint for adding account details to a lead
-*YouLendThirdPartyOnboardingApi.LeadsApi* | [**leadsLeadIdDocumentsBankstatementsPost**](docs/LeadsApi.md#leadsLeadIdDocumentsBankstatementsPost) | **POST** /Leads/{leadId}/documents/bankstatements | An endpoint for adding bank statements to a lead
-*YouLendThirdPartyOnboardingApi.LeadsApi* | [**leadsLeadIdDocumentsPaymentdataPost**](docs/LeadsApi.md#leadsLeadIdDocumentsPaymentdataPost) | **POST** /Leads/{leadId}/documents/paymentdata | An endpoint for adding payment data documents to a lead
-*YouLendThirdPartyOnboardingApi.LeadsApi* | [**leadsLeadIdDocumentsSignificantpersonsSignificantPersonIdKycDocumentTypePost**](docs/LeadsApi.md#leadsLeadIdDocumentsSignificantpersonsSignificantPersonIdKycDocumentTypePost) | **POST** /Leads/{leadId}/documents/significantpersons/{significantPersonId}/{kycDocumentType} | An endpoint for adding kyc documents for a significant person
-*YouLendThirdPartyOnboardingApi.LeadsApi* | [**leadsLeadIdKycquestionsPut**](docs/LeadsApi.md#leadsLeadIdKycquestionsPut) | **PUT** /Leads/{leadId}/kycquestions | An endpoint for adding KYC question answers to a lead
-*YouLendThirdPartyOnboardingApi.LeadsApi* | [**leadsLeadIdPaymentgatewaysPost**](docs/LeadsApi.md#leadsLeadIdPaymentgatewaysPost) | **POST** /Leads/{leadId}/paymentgateways | An endpoint for adding a payment gateway to a lead
-*YouLendThirdPartyOnboardingApi.LeadsApi* | [**leadsLeadIdSignificantpersonsPut**](docs/LeadsApi.md#leadsLeadIdSignificantpersonsPut) | **PUT** /Leads/{leadId}/significantpersons | An endpoint for updating significant persons for a lead
-*YouLendThirdPartyOnboardingApi.LeadsApi* | [**leadsPost**](docs/LeadsApi.md#leadsPost) | **POST** /Leads | Creates a Youlend Advance Lead
+*YlThirdPartyOnboardingApiClient.DocumentSigningApi* | [**documentSigningDocumentSigningIdGet**](docs/DocumentSigningApi.md#documentSigningDocumentSigningIdGet) | **GET** /DocumentSigning/{documentSigningId} | Gets the document signing for specified document
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdAccountdetailsGet**](docs/LeadsApi.md#leadsLeadIdAccountdetailsGet) | **GET** /Leads/{leadId}/accountdetails | An endpoint for adding account details to a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdAccountdetailsPut**](docs/LeadsApi.md#leadsLeadIdAccountdetailsPut) | **PUT** /Leads/{leadId}/accountdetails | An endpoint for adding account details to a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdDetailsGet**](docs/LeadsApi.md#leadsLeadIdDetailsGet) | **GET** /Leads/{leadId}/details | An endpoint for viewing the onboarding details of a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdDocumentsBankstatementsPost**](docs/LeadsApi.md#leadsLeadIdDocumentsBankstatementsPost) | **POST** /Leads/{leadId}/documents/bankstatements | An endpoint for adding bank statements to a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdDocumentsGet**](docs/LeadsApi.md#leadsLeadIdDocumentsGet) | **GET** /Leads/{leadId}/documents | An endpoint for getting kyc documents for a significant person
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdDocumentsPaymentdataPost**](docs/LeadsApi.md#leadsLeadIdDocumentsPaymentdataPost) | **POST** /Leads/{leadId}/documents/paymentdata | An endpoint for adding payment data documents to a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdDocumentsSignificantpersonsSignificantPersonIdKycDocumentTypePost**](docs/LeadsApi.md#leadsLeadIdDocumentsSignificantpersonsSignificantPersonIdKycDocumentTypePost) | **POST** /Leads/{leadId}/documents/significantpersons/{significantPersonId}/{kycDocumentType} | An endpoint for adding kyc documents for a significant person
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdKycquestionsGet**](docs/LeadsApi.md#leadsLeadIdKycquestionsGet) | **GET** /Leads/{leadId}/kycquestions | An endpoint for viewing the kyc questions of a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdKycquestionsPut**](docs/LeadsApi.md#leadsLeadIdKycquestionsPut) | **PUT** /Leads/{leadId}/kycquestions | An endpoint for adding KYC question answers to a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdOfferGet**](docs/LeadsApi.md#leadsLeadIdOfferGet) | **GET** /Leads/{leadId}/offer | An endpoint for getting the loan offer
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdOfferPost**](docs/LeadsApi.md#leadsLeadIdOfferPost) | **POST** /Leads/{leadId}/offer | An endpoint for creating the loan offer
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdOptionsGet**](docs/LeadsApi.md#leadsLeadIdOptionsGet) | **GET** /Leads/{leadId}/options | An endpoint for getting the loan options for a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdOrganisationdetailsPut**](docs/LeadsApi.md#leadsLeadIdOrganisationdetailsPut) | **PUT** /Leads/{leadId}/organisationdetails | An endpoint for adding organisation details
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdOrganisationsdetailsGet**](docs/LeadsApi.md#leadsLeadIdOrganisationsdetailsGet) | **GET** /Leads/{leadId}/organisationsdetails | An endpoint for viewing the organisation details of a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdPaymentdataGet**](docs/LeadsApi.md#leadsLeadIdPaymentdataGet) | **GET** /Leads/{leadId}/paymentdata | An endpoint for viewing the payment data of a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdPaymentgatewaysPost**](docs/LeadsApi.md#leadsLeadIdPaymentgatewaysPost) | **POST** /Leads/{leadId}/paymentgateways | An endpoint for adding a payment gateway to a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdSignificantpersonsPut**](docs/LeadsApi.md#leadsLeadIdSignificantpersonsPut) | **PUT** /Leads/{leadId}/significantpersons | An endpoint for updating significant persons for a lead
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsLeadIdStatePut**](docs/LeadsApi.md#leadsLeadIdStatePut) | **PUT** /Leads/{leadId}/state | An endpoint for updating the state of an onboarding
+*YlThirdPartyOnboardingApiClient.LeadsApi* | [**leadsPost**](docs/LeadsApi.md#leadsPost) | **POST** /Leads | Creates a Youlend Advance Lead
 
 
 ## Documentation for Models
 
- - [YouLendThirdPartyOnboardingApi.AccountDetailsModel](docs/AccountDetailsModel.md)
- - [YouLendThirdPartyOnboardingApi.AddressModel](docs/AddressModel.md)
- - [YouLendThirdPartyOnboardingApi.CreateThirdPartyAdvanceOnboardingResultModel](docs/CreateThirdPartyAdvanceOnboardingResultModel.md)
- - [YouLendThirdPartyOnboardingApi.DateModel](docs/DateModel.md)
- - [YouLendThirdPartyOnboardingApi.FreeTextQuestionModel](docs/FreeTextQuestionModel.md)
- - [YouLendThirdPartyOnboardingApi.InlineObject](docs/InlineObject.md)
- - [YouLendThirdPartyOnboardingApi.InlineObject1](docs/InlineObject1.md)
- - [YouLendThirdPartyOnboardingApi.InlineObject2](docs/InlineObject2.md)
- - [YouLendThirdPartyOnboardingApi.KycQuestionsModel](docs/KycQuestionsModel.md)
- - [YouLendThirdPartyOnboardingApi.PaymentGatewayModel](docs/PaymentGatewayModel.md)
- - [YouLendThirdPartyOnboardingApi.ProblemDetails](docs/ProblemDetails.md)
- - [YouLendThirdPartyOnboardingApi.SaveBankStatementDocumentResultModel](docs/SaveBankStatementDocumentResultModel.md)
- - [YouLendThirdPartyOnboardingApi.SavePaymentDataDocumentResultModel](docs/SavePaymentDataDocumentResultModel.md)
- - [YouLendThirdPartyOnboardingApi.SaveSignficantPersonKycDocumentResultModel](docs/SaveSignficantPersonKycDocumentResultModel.md)
- - [YouLendThirdPartyOnboardingApi.SaveSignificantPersonsResultModel](docs/SaveSignificantPersonsResultModel.md)
- - [YouLendThirdPartyOnboardingApi.SignificantPersonModel](docs/SignificantPersonModel.md)
- - [YouLendThirdPartyOnboardingApi.SignificantPersonsModel](docs/SignificantPersonsModel.md)
- - [YouLendThirdPartyOnboardingApi.ThirdPartyOnboardingModel](docs/ThirdPartyOnboardingModel.md)
- - [YouLendThirdPartyOnboardingApi.YesNoQuestionModel](docs/YesNoQuestionModel.md)
+ - [YlThirdPartyOnboardingApiClient.AccountDetailsModel](docs/AccountDetailsModel.md)
+ - [YlThirdPartyOnboardingApiClient.AccountV2StepModel](docs/AccountV2StepModel.md)
+ - [YlThirdPartyOnboardingApiClient.Address](docs/Address.md)
+ - [YlThirdPartyOnboardingApiClient.AddressModel](docs/AddressModel.md)
+ - [YlThirdPartyOnboardingApiClient.AdvanceSignUpData](docs/AdvanceSignUpData.md)
+ - [YlThirdPartyOnboardingApiClient.CreateThirdPartyAdvanceOnboardingResultModel](docs/CreateThirdPartyAdvanceOnboardingResultModel.md)
+ - [YlThirdPartyOnboardingApiClient.CreditRatingBandParameters](docs/CreditRatingBandParameters.md)
+ - [YlThirdPartyOnboardingApiClient.DateModel](docs/DateModel.md)
+ - [YlThirdPartyOnboardingApiClient.Document](docs/Document.md)
+ - [YlThirdPartyOnboardingApiClient.DocumentMetadataModel](docs/DocumentMetadataModel.md)
+ - [YlThirdPartyOnboardingApiClient.DocumentSigningViewModel](docs/DocumentSigningViewModel.md)
+ - [YlThirdPartyOnboardingApiClient.FreeTextQuestionModel](docs/FreeTextQuestionModel.md)
+ - [YlThirdPartyOnboardingApiClient.Industry](docs/Industry.md)
+ - [YlThirdPartyOnboardingApiClient.InlineObject](docs/InlineObject.md)
+ - [YlThirdPartyOnboardingApiClient.InlineObject1](docs/InlineObject1.md)
+ - [YlThirdPartyOnboardingApiClient.InlineObject2](docs/InlineObject2.md)
+ - [YlThirdPartyOnboardingApiClient.KycDocumentModel](docs/KycDocumentModel.md)
+ - [YlThirdPartyOnboardingApiClient.KycDocumentsV2StepModel](docs/KycDocumentsV2StepModel.md)
+ - [YlThirdPartyOnboardingApiClient.KycFreeTextQuestion](docs/KycFreeTextQuestion.md)
+ - [YlThirdPartyOnboardingApiClient.KycQuestions](docs/KycQuestions.md)
+ - [YlThirdPartyOnboardingApiClient.KycQuestionsModel](docs/KycQuestionsModel.md)
+ - [YlThirdPartyOnboardingApiClient.KycQuestionsStepView](docs/KycQuestionsStepView.md)
+ - [YlThirdPartyOnboardingApiClient.KycYesNoQuestion](docs/KycYesNoQuestion.md)
+ - [YlThirdPartyOnboardingApiClient.LoanOptionModel](docs/LoanOptionModel.md)
+ - [YlThirdPartyOnboardingApiClient.LoanSizingModel](docs/LoanSizingModel.md)
+ - [YlThirdPartyOnboardingApiClient.MerchantIdsModel](docs/MerchantIdsModel.md)
+ - [YlThirdPartyOnboardingApiClient.OfferStepModel](docs/OfferStepModel.md)
+ - [YlThirdPartyOnboardingApiClient.OnboardingOfferModel](docs/OnboardingOfferModel.md)
+ - [YlThirdPartyOnboardingApiClient.OnboardingOrganisationDetailsModel](docs/OnboardingOrganisationDetailsModel.md)
+ - [YlThirdPartyOnboardingApiClient.OnboardingStateModel](docs/OnboardingStateModel.md)
+ - [YlThirdPartyOnboardingApiClient.OnboardingV2View](docs/OnboardingV2View.md)
+ - [YlThirdPartyOnboardingApiClient.OrganisationDetailsV3](docs/OrganisationDetailsV3.md)
+ - [YlThirdPartyOnboardingApiClient.OrganisationDetailsV3StepView](docs/OrganisationDetailsV3StepView.md)
+ - [YlThirdPartyOnboardingApiClient.PaymentDataStepView](docs/PaymentDataStepView.md)
+ - [YlThirdPartyOnboardingApiClient.PaymentGatewayModel](docs/PaymentGatewayModel.md)
+ - [YlThirdPartyOnboardingApiClient.ProblemDetails](docs/ProblemDetails.md)
+ - [YlThirdPartyOnboardingApiClient.SaveBankStatementDocumentResultModel](docs/SaveBankStatementDocumentResultModel.md)
+ - [YlThirdPartyOnboardingApiClient.SavePaymentDataDocumentResultModel](docs/SavePaymentDataDocumentResultModel.md)
+ - [YlThirdPartyOnboardingApiClient.SaveSignficantPersonKycDocumentResultModel](docs/SaveSignficantPersonKycDocumentResultModel.md)
+ - [YlThirdPartyOnboardingApiClient.SaveSignificantPersonsResultModel](docs/SaveSignificantPersonsResultModel.md)
+ - [YlThirdPartyOnboardingApiClient.SignatorySigningViewModel](docs/SignatorySigningViewModel.md)
+ - [YlThirdPartyOnboardingApiClient.SignificantPersonDocumentsModel](docs/SignificantPersonDocumentsModel.md)
+ - [YlThirdPartyOnboardingApiClient.SignificantPersonModel](docs/SignificantPersonModel.md)
+ - [YlThirdPartyOnboardingApiClient.SignificantPersonV2](docs/SignificantPersonV2.md)
+ - [YlThirdPartyOnboardingApiClient.SignificantPersonsModel](docs/SignificantPersonsModel.md)
+ - [YlThirdPartyOnboardingApiClient.ThirdPartyOnboardingModel](docs/ThirdPartyOnboardingModel.md)
+ - [YlThirdPartyOnboardingApiClient.YesNoQuestionModel](docs/YesNoQuestionModel.md)
 
 
 ## Documentation for Authorization

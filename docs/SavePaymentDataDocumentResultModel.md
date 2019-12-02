@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.SavePaymentDataDocumentResultModel
+# YlThirdPartyOnboardingApiClient.SavePaymentDataDocumentResultModel
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.InlineObject1
+# YlThirdPartyOnboardingApiClient.InlineObject1
 
 ## Properties
 

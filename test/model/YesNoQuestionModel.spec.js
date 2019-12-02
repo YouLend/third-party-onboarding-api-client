@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.YesNoQuestionModel();
+    instance = new YlThirdPartyOnboardingApiClient.YesNoQuestionModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('YesNoQuestionModel', function() {
     it('should create an instance of YesNoQuestionModel', function() {
       // uncomment below and update the code to test YesNoQuestionModel
-      //var instane = new YouLendThirdPartyOnboardingApi.YesNoQuestionModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.YesNoQuestionModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.YesNoQuestionModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.YesNoQuestionModel);
     });
 
     it('should have the property answer (base name: "answer")', function() {
       // uncomment below and update the code to test the property answer
-      //var instane = new YouLendThirdPartyOnboardingApi.YesNoQuestionModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.YesNoQuestionModel();
       //expect(instance).to.be();
     });
 
     it('should have the property additionalInformation (base name: "additionalInformation")', function() {
       // uncomment below and update the code to test the property additionalInformation
-      //var instane = new YouLendThirdPartyOnboardingApi.YesNoQuestionModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.YesNoQuestionModel();
       //expect(instance).to.be();
     });
 

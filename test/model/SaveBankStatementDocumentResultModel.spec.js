@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.SaveBankStatementDocumentResultModel();
+    instance = new YlThirdPartyOnboardingApiClient.SaveBankStatementDocumentResultModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('SaveBankStatementDocumentResultModel', function() {
     it('should create an instance of SaveBankStatementDocumentResultModel', function() {
       // uncomment below and update the code to test SaveBankStatementDocumentResultModel
-      //var instane = new YouLendThirdPartyOnboardingApi.SaveBankStatementDocumentResultModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.SaveBankStatementDocumentResultModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.SaveBankStatementDocumentResultModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.SaveBankStatementDocumentResultModel);
     });
 
     it('should have the property leadId (base name: "leadId")', function() {
       // uncomment below and update the code to test the property leadId
-      //var instane = new YouLendThirdPartyOnboardingApi.SaveBankStatementDocumentResultModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SaveBankStatementDocumentResultModel();
       //expect(instance).to.be();
     });
 
     it('should have the property documentId (base name: "documentId")', function() {
       // uncomment below and update the code to test the property documentId
-      //var instane = new YouLendThirdPartyOnboardingApi.SaveBankStatementDocumentResultModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SaveBankStatementDocumentResultModel();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.SignificantPersonsModel();
+    instance = new YlThirdPartyOnboardingApiClient.SignificantPersonsModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('SignificantPersonsModel', function() {
     it('should create an instance of SignificantPersonsModel', function() {
       // uncomment below and update the code to test SignificantPersonsModel
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonsModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.SignificantPersonsModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonsModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.SignificantPersonsModel);
     });
 
     it('should have the property significantPersons (base name: "significantPersons")', function() {
       // uncomment below and update the code to test the property significantPersons
-      //var instane = new YouLendThirdPartyOnboardingApi.SignificantPersonsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SignificantPersonsModel();
       //expect(instance).to.be();
     });
 

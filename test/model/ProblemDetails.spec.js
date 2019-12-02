@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.ProblemDetails();
+    instance = new YlThirdPartyOnboardingApiClient.ProblemDetails();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('ProblemDetails', function() {
     it('should create an instance of ProblemDetails', function() {
       // uncomment below and update the code to test ProblemDetails
-      //var instane = new YouLendThirdPartyOnboardingApi.ProblemDetails();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.ProblemDetails);
+      //var instane = new YlThirdPartyOnboardingApiClient.ProblemDetails();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.ProblemDetails);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new YouLendThirdPartyOnboardingApi.ProblemDetails();
+      //var instane = new YlThirdPartyOnboardingApiClient.ProblemDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instane = new YouLendThirdPartyOnboardingApi.ProblemDetails();
+      //var instane = new YlThirdPartyOnboardingApiClient.ProblemDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new YouLendThirdPartyOnboardingApi.ProblemDetails();
+      //var instane = new YlThirdPartyOnboardingApiClient.ProblemDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property detail (base name: "detail")', function() {
       // uncomment below and update the code to test the property detail
-      //var instane = new YouLendThirdPartyOnboardingApi.ProblemDetails();
+      //var instane = new YlThirdPartyOnboardingApiClient.ProblemDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property instance (base name: "instance")', function() {
       // uncomment below and update the code to test the property instance
-      //var instane = new YouLendThirdPartyOnboardingApi.ProblemDetails();
+      //var instane = new YlThirdPartyOnboardingApiClient.ProblemDetails();
       //expect(instance).to.be();
     });
 

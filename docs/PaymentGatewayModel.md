@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.PaymentGatewayModel
+# YlThirdPartyOnboardingApiClient.PaymentGatewayModel
 
 ## Properties
 

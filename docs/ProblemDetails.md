@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.ProblemDetails
+# YlThirdPartyOnboardingApiClient.ProblemDetails
 
 ## Properties
 

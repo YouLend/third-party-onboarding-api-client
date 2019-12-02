@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.AddressModel
+# YlThirdPartyOnboardingApiClient.AddressModel
 
 ## Properties
 

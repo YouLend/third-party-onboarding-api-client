@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.InlineObject1();
+    instance = new YlThirdPartyOnboardingApiClient.InlineObject1();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('InlineObject1', function() {
     it('should create an instance of InlineObject1', function() {
       // uncomment below and update the code to test InlineObject1
-      //var instane = new YouLendThirdPartyOnboardingApi.InlineObject1();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.InlineObject1);
+      //var instane = new YlThirdPartyOnboardingApiClient.InlineObject1();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.InlineObject1);
     });
 
     it('should have the property file (base name: "file")', function() {
       // uncomment below and update the code to test the property file
-      //var instane = new YouLendThirdPartyOnboardingApi.InlineObject1();
+      //var instane = new YlThirdPartyOnboardingApiClient.InlineObject1();
       //expect(instance).to.be();
     });
 

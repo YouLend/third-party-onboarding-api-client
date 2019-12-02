@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.SaveSignificantPersonsResultModel();
+    instance = new YlThirdPartyOnboardingApiClient.SaveSignificantPersonsResultModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('SaveSignificantPersonsResultModel', function() {
     it('should create an instance of SaveSignificantPersonsResultModel', function() {
       // uncomment below and update the code to test SaveSignificantPersonsResultModel
-      //var instane = new YouLendThirdPartyOnboardingApi.SaveSignificantPersonsResultModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.SaveSignificantPersonsResultModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.SaveSignificantPersonsResultModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.SaveSignificantPersonsResultModel);
     });
 
     it('should have the property leadId (base name: "leadId")', function() {
       // uncomment below and update the code to test the property leadId
-      //var instane = new YouLendThirdPartyOnboardingApi.SaveSignificantPersonsResultModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SaveSignificantPersonsResultModel();
       //expect(instance).to.be();
     });
 
     it('should have the property significantPersonIds (base name: "significantPersonIds")', function() {
       // uncomment below and update the code to test the property significantPersonIds
-      //var instane = new YouLendThirdPartyOnboardingApi.SaveSignificantPersonsResultModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.SaveSignificantPersonsResultModel();
       //expect(instance).to.be();
     });
 

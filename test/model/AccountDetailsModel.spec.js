@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.YouLendThirdPartyOnboardingApi);
+    factory(root.expect, root.YlThirdPartyOnboardingApiClient);
   }
-}(this, function(expect, YouLendThirdPartyOnboardingApi) {
+}(this, function(expect, YlThirdPartyOnboardingApiClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new YouLendThirdPartyOnboardingApi.AccountDetailsModel();
+    instance = new YlThirdPartyOnboardingApiClient.AccountDetailsModel();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('AccountDetailsModel', function() {
     it('should create an instance of AccountDetailsModel', function() {
       // uncomment below and update the code to test AccountDetailsModel
-      //var instane = new YouLendThirdPartyOnboardingApi.AccountDetailsModel();
-      //expect(instance).to.be.a(YouLendThirdPartyOnboardingApi.AccountDetailsModel);
+      //var instane = new YlThirdPartyOnboardingApiClient.AccountDetailsModel();
+      //expect(instance).to.be.a(YlThirdPartyOnboardingApiClient.AccountDetailsModel);
     });
 
     it('should have the property sortCode (base name: "sortCode")', function() {
       // uncomment below and update the code to test the property sortCode
-      //var instane = new YouLendThirdPartyOnboardingApi.AccountDetailsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AccountDetailsModel();
       //expect(instance).to.be();
     });
 
     it('should have the property accountNumber (base name: "accountNumber")', function() {
       // uncomment below and update the code to test the property accountNumber
-      //var instane = new YouLendThirdPartyOnboardingApi.AccountDetailsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AccountDetailsModel();
       //expect(instance).to.be();
     });
 
     it('should have the property swift (base name: "swift")', function() {
       // uncomment below and update the code to test the property swift
-      //var instane = new YouLendThirdPartyOnboardingApi.AccountDetailsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AccountDetailsModel();
       //expect(instance).to.be();
     });
 
     it('should have the property iban (base name: "iban")', function() {
       // uncomment below and update the code to test the property iban
-      //var instane = new YouLendThirdPartyOnboardingApi.AccountDetailsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AccountDetailsModel();
       //expect(instance).to.be();
     });
 
     it('should have the property bankName (base name: "bankName")', function() {
       // uncomment below and update the code to test the property bankName
-      //var instane = new YouLendThirdPartyOnboardingApi.AccountDetailsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AccountDetailsModel();
       //expect(instance).to.be();
     });
 
     it('should have the property confirmedCompanyAccount (base name: "confirmedCompanyAccount")', function() {
       // uncomment below and update the code to test the property confirmedCompanyAccount
-      //var instane = new YouLendThirdPartyOnboardingApi.AccountDetailsModel();
+      //var instane = new YlThirdPartyOnboardingApiClient.AccountDetailsModel();
       //expect(instance).to.be();
     });
 

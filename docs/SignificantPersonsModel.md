@@ -1,4 +1,4 @@
-# YouLendThirdPartyOnboardingApi.SignificantPersonsModel
+# YlThirdPartyOnboardingApiClient.SignificantPersonsModel
 
 ## Properties
 
