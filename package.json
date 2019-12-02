@@ -1,6 +1,6 @@
 {
   "name": "yl-third-party-onboarding-api-client",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Through this API you can can initiate the process of onboarding a borrower with YouLend ",
   "license": "MT",
   "main": "dist/index.js",
